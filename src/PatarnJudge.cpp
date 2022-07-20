@@ -21,9 +21,11 @@ int8 Judge(int8 _patern){
     
     if(_patern==SLALOM){
         slalomPatarn=paternChk;
+        return slalomPatarn;
     }    
     else if(_patern==GARAGE){
         garagePatarn=paternChk;
+        return garagePatarn;
     }
 }
 int8 getSlalom(){
