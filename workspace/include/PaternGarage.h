@@ -1,10 +1,10 @@
 #pragma once
 enum GarageColor
 {
-  YELLOWTHRESHOL
-  REDTHRESHOLD 
-  GREENTHRESHOLD
-  BLUETHRESHOLD 
+  YELLOWTHRESHOL,
+  REDTHRESHOLD ,
+  GREENTHRESHOLD,
+  BLUETHRESHOLD ,
 };
 
 #include <cstdint>
@@ -13,14 +13,14 @@ enum GarageColor
 #include <string>
 #include "ev3api.h"
 #include "system.h"
-class PaternSlalom:public Comparison
+class PaternGarage : public Comparison
 {
 private:
     RGB_DATA rgb;
 public:
-    PaternSlalom();
+    PaternGarage();
 
-    ~PaternSlalom();
+    ~PaternGarage();
 
     int8 decide(); 
 };

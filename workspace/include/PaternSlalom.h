@@ -7,14 +7,14 @@
 #include <string>
 #include "ev3api.h"
 #include "system.h"
-class PaternGarage:public Comparison
+class PaternSlalom : public Comparison
 {
 private:
     int16 distance;
 public:
-    PaternGarage();
+    PaternSlalom();
 
-    ~PaternGarage();
+    ~PaternSlalom();
 
     int8 decide(); 
 };

@@ -1,19 +1,21 @@
 #include "../include/PaternJudge.h"
+#include "../include/PaternSlalom.h"
+#include "../include/PaternGarage.h"
 
-PaternJudge(){
+PaternJudge::PaternJudge(){
     slalomPatarn=0;
     garagePatarn=0;
 }
-~PaternJudge(){
+PaternJudge::~PaternJudge(){
     delete comparison;
 }
-int8 Judge(int8 _patern){
+int8 PaternJudge::Judge(int8 _patern){
     int8 paternChk=0;
     Comparison comparison;
     if(_patern==SLALOM){
         comparison=new PaternSlalom;
     }
-    else if(_patern==Garage){
+    else if(_patern==GARAGE){
         comparison=new PaternGarage;
     }
 
@@ -21,16 +23,16 @@ int8 Judge(int8 _patern){
     
     if(_patern==SLALOM){
         slalomPatarn=paternChk;
-        return slalomPatarn;
+        return SYS_OK;
     }    
     else if(_patern==GARAGE){
         garagePatarn=paternChk;
-        return garagePatarn;
+        return SYS_OK;
     }
 }
-int8 getSlalom(){
+int8 PaternJudge::getSlalom(){
     return slalomPatarn;
 }
-int8 getGarage(){
+int8 PaternJudge::getGarage(){
     return garagePatarn;
 }

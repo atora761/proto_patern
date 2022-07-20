@@ -5,8 +5,9 @@ mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 APPL_COBJS += \
 
 APPL_CXXOBJS += \
-				Controller.o\
-				PIDControl.o\
+				PaternGarage.o\
+				PaternSlalom.o\
+				PaternJudge.o\
 				system.o\
 #
 SRCLANG := c++

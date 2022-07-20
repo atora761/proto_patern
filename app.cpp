@@ -10,8 +10,8 @@
 #include "ev3api.h"
 #include "app.h"
 #include "etroboc_ext.h"
-#include "workspace/include/Controller.h"
-#include "workspace/include/PIDControl.h"
+#include "workspace/include/system.h"
+#include "workspace/include/PaternJudge.h"
 #if defined(BUILD_MODULE)
 #include "module_cfg.h"
 #else
@@ -56,8 +56,6 @@ void start_task(intptr_t unused)
 void main_task(intptr_t unused)
 {
     while(1){
-        PIDControl pidcontrol;
-        pidcontrol.run(10.7);
     }
     ext_tsk();
 }

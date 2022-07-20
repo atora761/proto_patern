@@ -1,18 +1,20 @@
 #include "../include/PaternSlalom.h"
 
-PaternSlalom(){}
+PaternSlalom::PaternSlalom(){
+    distance=0;
+}
 
-~PaternSlalom(){}
+PaternSlalom::~PaternSlalom(){}
 
-int8 decide(){
+int8 PaternSlalom::decide(){
     int8 slalomstate=0;
     UltraSonic ultrasonic = UltraSonic::getInstance();
     distance=ultrasonic.getDistance();
     //黄色
     if(distance<10){
-        slalomstate=SLALOMPATERNA
+        slalomstate=SLALOMPATERNA;
     }else{
-        slalomstate=SLALOMPATERNB
+        slalomstate=SLALOMPATERNB;
     }
     return slalomstate;
 }
